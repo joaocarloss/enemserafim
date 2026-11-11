@@ -1,13 +1,24 @@
-# ENEM Serafim de Carvalho — 2026
+# ENEM Serafim de Carvalho — Análise 2026
 
-Dashboard estático responsivo, pronto para GitHub Pages.
+Dashboard de desempenho do 1º dia do ENEM 2026 (CEPI Serafim de Carvalho, Jataí-GO).
+Resultados em **acertos brutos** (gabarito preliminar), sem nota TRI.
 
-## Atenção à privacidade
-Este pacote **inclui os nomes e as respostas dos 26 estudantes e o gabarito de 95 registros dentro do index.html**.
-**Qualquer pessoa com acesso ao site ou ao repositório poderá consultar ou extrair esses dados.**
-Não publique em repositório ou GitHub Pages públicos sem autorização e avaliação das regras de proteção de dados dos estudantes (LGPD e orientações da escola/rede). GitHub Pages não oferece controle de acesso aos dados embutidos no HTML.
+## Estrutura
+- `index.html` — aplicação completa (HTML + CSS + JS), versão 2 (layout moderno, mobile-first). Dados e regras de correção preservados; totais por estudante conferidos contra a versão anterior.
+- `assets/logo-serafim.png` — brasão da escola (adicionar manualmente; ver `assets/LEIA-ME.txt`).
+- `docs/DIAGNOSTICO_E_PLANO.md` — diagnóstico técnico e plano de evolução (aguardando aprovação).
 
-## Publicação
-Extraia os arquivos na raiz do repositório e configure Settings → Pages → Deploy from a branch → main → /(root).
-O dashboard abre com os resultados preenchidos automaticamente, inclusive no celular.
-Os dados são de conferência preliminar; acertos brutos não são notas TRI.
+## ⚠️ Antes de publicar
+O `index.html` contém **nomes e respostas reais de estudantes**. Em GitHub Pages público,
+qualquer pessoa poderia ler esses dados. **Não publique em repositório/página pública**
+até que a etapa de privacidade (seção 5 do diagnóstico) seja aplicada.
+Use repositório **privado** para guardar o código enquanto isso.
+
+## Mudanças da versão 2
+- Respostas em branco aparecem em **cinza** na grade do estudante e contam como erro (também na aba Questões, com coluna "Em branco").
+- Navegação lateral no computador e barra inferior no celular; cartões, gráficos e tabelas responsivos.
+- Estudante selecionado por identificador (não muda ao trocar filtros); clique no nome na tabela abre a análise individual.
+- Tabela com cabeçalho fixo, ordenação por clique e destaque ▲/▼ acima/abaixo da média; menor resultado nos indicadores; ordenação de questões por menor taxa.
+
+## Publicar no GitHub Pages
+Settings → Pages → Branch `main` / pasta `/ (root)`. Lembre-se de adicionar `assets/logo-serafim.png`.
